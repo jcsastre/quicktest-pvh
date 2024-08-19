@@ -41,3 +41,8 @@ button {
 .hidden {
     display: none;
 }
+
+.sortable-ghost {
+    opacity: 0;
+  }
+  

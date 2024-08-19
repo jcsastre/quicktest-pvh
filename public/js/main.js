@@ -28,47 +28,24 @@ backBtn.addEventListener('click', () => {
     screen2.style.display = 'block';
 });
 
-// Drag and drop para listas
-function enableDragAndDrop(listId) {
+// Configurar SortableJS para listas
+function initializeSortable(listId) {
     const list = document.getElementById(listId);
-    let draggedItem = null;
-
-    list.addEventListener('dragstart', (e) => {
-        draggedItem = e.target;
-        e.target.style.opacity = 0.5;
-    });
-
-    list.addEventListener('dragend', (e) => {
-        e.target.style.opacity = "";
-    });
-
-    list.addEventListener('dragover', (e) => {
-        e.preventDefault();
-    });
-
-    list.addEventListener('dragenter', (e) => {
-        if (e.target.tagName === 'LI' && e.target !== draggedItem) {
-            e.target.style.border = '2px dashed #000';
-        }
-    });
-
-    list.addEventListener('dragleave', (e) => {
-        if (e.target.tagName === 'LI' && e.target !== draggedItem) {
-            e.target.style.border = '';
-        }
-    });
-
-    list.addEventListener('drop', (e) => {
-        if (e.target.tagName === 'LI' && e.target !== draggedItem) {
-            e.target.style.border = '';
-            list.insertBefore(draggedItem, e.target.nextSibling || e.target);
+    
+    // Inicializa SortableJS en la lista
+    new Sortable(list, {
+        animation: 150,
+        ghostClass: 'sortable-ghost',  // Clase aplicada al elemento que se está arrastrando
+        onEnd: function (evt) {
+            // Opcional: Código a ejecutar después de que el elemento se haya soltado
+            console.log(`Elemento movido de ${evt.oldIndex} a ${evt.newIndex}`);
         }
     });
 }
 
 // Habilitar drag and drop en ambas listas
-enableDragAndDrop('sortable1');
-enableDragAndDrop('sortable2');
+initializeSortable('sortable1');
+initializeSortable('sortable2');
 
 resultsBtn.addEventListener('click', () => {
     // Obtener los elementos de la lista de Screen 2
