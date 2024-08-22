@@ -9,27 +9,35 @@
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
-    <div id="screen1" class="screen">
+    <div id="screenStart" class="screen">
       <h1>Test de valoración de tus Mundos Externo e Interno</h1>
       <p style="text-align: left;">
-        Mediante esta prueba obtendrás información acerca de como te encuentras actualmente en tus Mundos Externo e Interno.
+        Mediante esta prueba obtendrás al instante información acerca de como te encuentras actualmente en tus Mundos Externo e Interno.
       </p>
       <p style="text-align: left;">
-        En el Mundo Externo se evaluan las relaciones interpersonales, practicidad y relación con los sistemas y la autoridad.
+        En el Mundo Externo obtendrás información de como te encuentras en las relaciones interpersonales, practicidad y relación con los sistemas y la autoridad.
       </p>
       <p style="text-align: left;">
-        En el Mundo Interno se evalua la autoestima, vivencia de lo que haces en la vida y autodirección.
+        En el Mundo Interno obtendrás información de como te encuentras en la autoestima, vivencia de lo que haces en la vida y autodirección.
       </p>
       <p style="text-align: left;">
         El test consta de dos partes. En cada parte hay que ordenar 18 frases. No lleva más de diez minutos.
       </p>
       <p style="text-align: left;">
-        No se recolecta ningún tipo de información personal ni información sobre el dispositivo desde el que se hace. Tampoco se guardan los resultados en ninguna base de datos.
+        Para poder generar la información de forma instántanea se usa un proceso automatizado, en este proceso automático no se recolecta
+        ningún tipo de información personal, tampoco se guardan las respuestas de forma anónima con fines estadísticos.
       </p>
-      <button id="continueBtn1">Empezar el Test</button>
+      <p style="text-align: left;">
+        La información que se obtiene de forma automática es sólo una parte de toda la información que puede obtener del test.
+        Si después de realizar la prueba estás interesada en obtener información ampliada y la causa de los posibles bloqueos
+        que puedas tener, puedes contactarme por WhatsApp al 673 428 633, o por correo a juan.carlos.sastre.iglesias@gmail.com.
+        Estoy certificado en Axiología Formal e Interpretación de la Prueba de Valores R. S. Hartman por el Institut d'Axiología
+        Rober S. Hartman.
+      </p>
+      <button id="btnContinueToPart1">Empezar el Test</button>
     </div>
 
-    <div id="screen2" class="screen hidden">
+    <div id="screenPart1" class="screen hidden">
       <h1>Parte 1</h1>
       <p style="text-align: left;">
         Abajo encontrarás una lista de 18 frases. Cada una de éstas representa  algo  a  lo  cual  una  persona puede asignarle diferentes valores (bueno o malo).
@@ -39,32 +47,32 @@
         solamente tienes que arrastraras arriba o abajo.
       </p>
       <ul id="sortable1">
-        <li id="item1" draggable="true">Una buena comida</li>
-        <li id="item2" draggable="true">Un mejoramiento técnico</li>
-        <li id="item3" draggable="true">Una idea absurda</li>
-        <li id="item4" draggable="true">Una multa</li>
-        <li id="item5" draggable="true">Basura</li>
-        <li id="item6" draggable="true">Un científico dedicado</li>
-        <li id="item7" draggable="true">Hacer estallar un avión en vuelo con pasajeros dentro</li>
-        <li id="item8" draggable="true">Quemar a un hereje en una hoguera</li>
-        <li id="item9" draggable="true">Un cortocircuito</li>
-        <li id="item10" draggable="true">Con este anillo yo te desposo</li>
-        <li id="item11" draggable="true">Un bebé</li>
-        <li id="item12" draggable="true">Torturar a una persona</li>
-        <li id="item13" draggable="true">Amor a la naturaleza</li>
-        <li id="item14" draggable="true">Un loco</li>
-        <li id="item15" draggable="true">Una línea de producción en serie</li>
-        <li id="item16" draggable="true">Esclavitud</li>
-        <li id="item17" draggable="true">Un genio matemático</li>
-        <li id="item18" draggable="true">Un uniforme</li>
+        <li id="1" draggable="true">Una buena comida</li>
+        <li id="2" draggable="true">Un mejoramiento técnico</li>
+        <li id="3" draggable="true">Una idea absurda</li>
+        <li id="4" draggable="true">Una multa</li>
+        <li id="5" draggable="true">Basura</li>
+        <li id="6" draggable="true">Un científico dedicado</li>
+        <li id="7" draggable="true">Hacer estallar un avión en vuelo con pasajeros dentro</li>
+        <li id="8" draggable="true">Quemar a un hereje en una hoguera</li>
+        <li id="9" draggable="true">Un cortocircuito</li>
+        <li id="10" draggable="true">Con este anillo yo te desposo</li>
+        <li id="11" draggable="true">Un bebé</li>
+        <li id="12" draggable="true">Torturar a una persona</li>
+        <li id="13" draggable="true">Amor a la naturaleza</li>
+        <li id="14" draggable="true">Un loco</li>
+        <li id="15" draggable="true">Una línea de producción en serie</li>
+        <li id="16" draggable="true">Esclavitud</li>
+        <li id="17" draggable="true">Un genio matemático</li>
+        <li id="18" draggable="true">Un uniforme</li>
       </ul>
       <p style="text-align: left;">
         Revisa el orden de las frases, y si te parece correcto, entonces pulsa sobre el botón "Ir a Parte 2"
       </p>
-      <button id="continueBtn2">Ir a Parte 2</button>
+      <button id="btnContinueToPart2">Ir a Parte 2</button>
     </div>
 
-    <div id="screen3" class="screen hidden">
+    <div id="screenPart2" class="screen hidden">
       <h1>Parte 2</h1>
       <p style="text-align: left;">
         Abajo encontrarás una lista de 18 frases. Ordenálas en función de lo acuerdo que estés. En la primera posición debería aparecer la frase
@@ -72,30 +80,48 @@
         todas las frases en cinco minutos. Para ordenarlas solamente tienes que arrastraras arriba o abajo.
       </p>
       <ul id="sortable2">
-        <li id="item1" draggable="true">Me gusta mi trabajo, me hace bien</li>
-        <li id="item2" draggable="true">El universo es un sistema notablemente armonioso</li>
-        <li id="item3" draggable="true">El mundo no tiene mucho sentido para mí</li>
-        <li id="item4" draggable="true">Por mas intensamente que trabaje siempre me sentiré frustrada</li>
-        <li id="item5" draggable="true">Las condiciones en que trabajo son deplorables y arruinan mi trabajo</li>
-        <li id="item6" draggable="true">Yo me siento a gusto en el mundo</li>
-        <li id="item7" draggable="true">Detesto mi trabajo</li>
-        <li id="item8" draggable="true">Mi vida está trastornando al mundo</li>
-        <li id="item9" draggable="true">Mi trabajo no contribuye con nada al mundo</li>
-        <li id="item10" draggable="true">Mi trabajo pone de manifiesto lo mejor que hay en mi</li>
-        <li id="item11" draggable="true">Estoy contenta con ser yo misma</li>
-        <li id="item12" draggable="true">Maldigo el día en que nací</li>
-        <li id="item13" draggable="true">Me encanta mi trabajo</li>
-        <li id="item14" draggable="true">Me molesta que el universo no tenga sentido</li>
-        <li id="item15" draggable="true">Cuanto mejor comprendo mi lugar en el mundo, tanto mejor me va en mi trabajo</li>
-        <li id="item16" draggable="true">Mi trabajo me hace desdichada</li>
-        <li id="item17" draggable="true">Amo la belleza del mundo </li>
-        <li id="item18" draggable="true">Mi trabajo contribuye a la belleza y armonía del mundo</li>
+        <li id="1" draggable="true">Me gusta mi trabajo, me hace bien</li>
+        <li id="2" draggable="true">El universo es un sistema notablemente armonioso</li>
+        <li id="3" draggable="true">El mundo no tiene mucho sentido para mí</li>
+        <li id="4" draggable="true">Por mas intensamente que trabaje siempre me sentiré frustrada</li>
+        <li id="5" draggable="true">Las condiciones en que trabajo son deplorables y arruinan mi trabajo</li>
+        <li id="6" draggable="true">Yo me siento a gusto en el mundo</li>
+        <li id="7" draggable="true">Detesto mi trabajo</li>
+        <li id="8" draggable="true">Mi vida está trastornando al mundo</li>
+        <li id="9" draggable="true">Mi trabajo no contribuye con nada al mundo</li>
+        <li id="10" draggable="true">Mi trabajo pone de manifiesto lo mejor que hay en mi</li>
+        <li id="11" draggable="true">Estoy contenta con ser yo misma</li>
+        <li id="12" draggable="true">Maldigo el día en que nací</li>
+        <li id="13" draggable="true">Me encanta mi trabajo</li>
+        <li id="14" draggable="true">Me molesta que el universo no tenga sentido</li>
+        <li id="15" draggable="true">Cuanto mejor comprendo mi lugar en el mundo, tanto mejor me va en mi trabajo</li>
+        <li id="16" draggable="true">Mi trabajo me hace desdichada</li>
+        <li id="17" draggable="true">Amo la belleza del mundo </li>
+        <li id="18" draggable="true">Mi trabajo contribuye a la belleza y armonía del mundo</li>
       </ul>
       <p style="text-align: left;">
         Revisa el orden de las frases, y si te parece correcto, "Ver resultados"
       </p>
-      <button id="backBtn">Volver a Parte 1</button>
-      <button id="resultsBtn">Ver resultados</button>
+      <button id="btnBackToPart1">Volver a Parte 1</button>
+      <button id="btnSeeResults">Ver resultados</button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="screenFetchingResults" class="screen hidden">
+      <h1>Cargando...</h1>
+      <div class="loader"></div> <!-- This will be the loading animation -->
+    </div>
+
+    <!-- Results Screen -->
+    <div id="screenResult" class="screen hidden">
+      <h1>Resultados</h1>
+      <p style="text-align: left;">
+        Los resultados se han generado de forma automatizada y son una parte de toda la información que se puede
+        obtener de la prueba. Si deseas obtener información ampliada así como las posibles causas de los posibles
+        bloqueos que puedas tener, puedes contactar por WhatsApp al 673 428 633, o por correo a juan.carlos.sastre.iglesias@gmail.com.
+
+        Soy especialista 
+      </p>
     </div>
 
     <script src="./js/main.js"></script>
