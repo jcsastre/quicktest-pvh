@@ -43,15 +43,34 @@ btnSeeResults.addEventListener("click", () => {
 
     // TODO: enviar los identificadores a tu backend y esperar el json de respuesta con los resultados
 
-    // Mostrar los identificadores en la consola
-    console.log('Identificadores de los elementos en Screen 2:', idsScreen2);
-    console.log('Identificadores de los elementos en Screen 3:', idsScreen3);
+    const responses = [...idsScreen2, ...idsScreen3];
+    const payload = { responses };
 
-    // Simulate loading time of 3 seconds
-    setTimeout(() => {
+    // Mostrar los identificadores en la consola
+    console.log('responses', responses);
+    console.log('payload', payload);
+
+    // Realizar la petición HTTP GET
+    fetch('http://localhost:8080/quicktest', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(responses)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Respuesta del servidor:', data);
         screenFetchingResults.style.display = 'none';
         screenResult.style.display = 'block';
-    }, 3000);
+        // TODO: Procesar y mostrar los resultados en la pantalla de resultados
+    })
+    .catch(error => {
+        console.error('Error en la petición:', error);
+        screenFetchingResults.style.display = 'none';
+        screenResult.style.display = 'block';
+        // TODO: Manejar el error adecuadamente
+    });
 });
 
 // Configurar SortableJS para listas
