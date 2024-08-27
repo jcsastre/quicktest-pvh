@@ -63,7 +63,13 @@ btnSeeResults.addEventListener("click", () => {
         console.log('Respuesta del servidor:', data);
         screenFetchingResults.style.display = 'none';
         screenResult.style.display = 'block';
-        // TODO: Procesar y mostrar los resultados en la pantalla de resultados
+        // Procesar y mostrar los resultados en la pantalla de resultados
+        document.getElementById(`me_dimi`).textContent = data[0];
+        document.getElementById(`me_dime`).textContent = data[1];
+        document.getElementById(`me_dims`).textContent = data[2];
+        document.getElementById(`mi_dimi`).textContent = data[3];
+        document.getElementById(`mi_dime`).textContent = data[4];
+        document.getElementById(`mi_dims`).textContent = data[5];
     })
     .catch(error => {
         console.error('Error en la petición:', error);
@@ -72,6 +78,8 @@ btnSeeResults.addEventListener("click", () => {
         // TODO: Manejar el error adecuadamente
     });
 });
+
+// me_dimi
 
 // Configurar SortableJS para listas
 function initializeSortable(listId) {
