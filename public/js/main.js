@@ -10,23 +10,27 @@ const screenResult = document.getElementById('screenResult');
 document.getElementById('btn_ScreenStart_Continue').addEventListener('click', () => {
     screenStart.style.display = 'none';
     screenPart1.style.display = 'block';
+    window.scrollTo(0, 0); 
 });
 
 // Screen Part 1
 document.getElementById('btn_ScreenPart1_Continue').addEventListener('click', () => {
     screenPart1.style.display = 'none';
     screenPart2.style.display = 'block';
+    window.scrollTo(0, 0); 
 });
 
 // Screen Part 2
 document.getElementById('btn_ScreenPart2_Back').addEventListener('click', () => {
     screenPart2.style.display = 'none';
     screenPart1.style.display = 'block';
+    window.scrollTo(0, 0); 
 });
 
 document.getElementById('btn_ScreenPart2_Continue').addEventListener('click', () => {
     screenPart2.style.display = 'none';
     screenFetchingResults.style.display = 'block';
+    window.scrollTo(0, 0); 
 
     const itemsScreen2 = document.querySelectorAll('#sortable1 li');
     const idsScreen2 = Array.from(itemsScreen2).map(item => item.id);
@@ -66,6 +70,7 @@ document.getElementById('btn_ScreenPart2_Continue').addEventListener('click', ()
         console.error('Error en la petición:', error);
         screenFetchingResults.style.display = 'none';
         screenResult.style.display = 'block';
+        window.scrollTo(0, 0); 
         // TODO: Manejar el error adecuadamente
     });
 });
