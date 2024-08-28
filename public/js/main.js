@@ -1,37 +1,77 @@
-// Variables para los elementos de las pantallas
 const screenStart = document.getElementById('screenStart');
 const screenPart1 = document.getElementById('screenPart1');
+const screenPart1Review = document.getElementById('screenPart1Review');
 const screenPart2 = document.getElementById('screenPart2');
+const screenPart2Review = document.getElementById('screenPart2Review');
 const screenFetchingResults = document.getElementById('screenFetchingResults');
 const screenResult = document.getElementById('screenResult');
 
-// Botones de navegación
-const btnContinueToPart1 = document.getElementById('btnContinueToPart1');
-const btnBackToPart1 = document.getElementById('btnBackToPart1');
-const btnContinueToPart2 = document.getElementById('btnContinueToPart2');
-const btnBackToPart2 = document.getElementById('btnBackToPart2');
-const btnSeeResults = document.getElementById('btnSeeResults');
-
-// Inicialización de la pantalla 1
-screenStart.style.display = 'block';
-
-// Manejo de eventos para los botones
-btnContinueToPart1.addEventListener('click', () => {
+// Screen Start
+document.getElementById('btnScreenStartContinueToPart1').addEventListener('click', () => {
     screenStart.style.display = 'none';
     screenPart1.style.display = 'block';
 });
 
-btnBackToPart1.addEventListener('click', () => {
+// Screen Part 1
+document.getElementById('btnScreenPart1ContinueToReview').addEventListener('click', () => {
+
+    // Obtener los elementos de la lista anterior
+    const items = document.querySelectorAll('#sortable1 li');
+    const orderedListPart1 = document.getElementById('orderedListPart1');
+    orderedListPart1.innerHTML = ''; // Limpiar la lista numerada
+
+    // Añadir los elementos a la lista numerada
+    items.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.style.textAlign = 'left';
+        listItem.textContent = `${item.textContent}`;
+        orderedListPart1.appendChild(listItem);
+    });
+
+    screenPart1.style.display = 'none';
+    screenPart1Review.style.display = 'block';
+});
+
+// Screen Part 1 Review
+document.getElementById('btnScreenPart1ReviewBack').addEventListener('click', () => {
+    screenPart1Review.style.display = 'none';
+    screenPart1.style.display = 'block';
+});
+document.getElementById('btnScreenPart1ReviewNext').addEventListener('click', () => {
+    screenPart1Review.style.display = 'none';
+    screenPart2.style.display = 'block';
+});
+
+// Screen Part 2
+document.getElementById('btnScreenPart2Back').addEventListener('click', () => {
     screenPart2.style.display = 'none';
     screenPart1.style.display = 'block';
 });
 
-btnContinueToPart2.addEventListener('click', () => {
-    screenPart1.style.display = 'none';
-    screenPart2.style.display = 'block';
+document.getElementById('btnScreenPart2Next').addEventListener('click', () => {
+
+    const items = document.querySelectorAll('#sortable2 li');
+    const orderedListPart2 = document.getElementById('orderedListPart2');
+    orderedListPart2.innerHTML = ''; // Limpiar la lista numerada
+
+    items.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.style.textAlign = 'left';
+        listItem.textContent = `${item.textContent}`;
+        orderedListPart2.appendChild(listItem);
+    });
+
+    screenPart2.style.display = 'none';
+    screenPart2Review.style.display = 'block';
 });
 
-btnSeeResults.addEventListener("click", () => {
+// Screen Part 2 Review
+document.getElementById('btnScreenPart2ReviewBack').addEventListener('click', () => {
+    screenPart2Review.style.display = 'none';
+    screenPart2.style.display = 'block';
+});
+document.getElementById('btnScreenPart2ReviewNext').addEventListener("click", () => {
+
     screenPart2.style.display = 'none';
     screenFetchingResults.style.display = 'block';
 
@@ -40,8 +80,6 @@ btnSeeResults.addEventListener("click", () => {
     
     const itemsScreen3 = document.querySelectorAll('#sortable2 li');
     const idsScreen3 = Array.from(itemsScreen3).map(item => item.id);
-
-    // TODO: enviar los identificadores a tu backend y esperar el json de respuesta con los resultados
 
     const responses = [...idsScreen2, ...idsScreen3];
     const payload = { responses };
@@ -79,8 +117,6 @@ btnSeeResults.addEventListener("click", () => {
     });
 });
 
-// me_dimi
-
 // Configurar SortableJS para listas
 function initializeSortable(listId) {
     const list = document.getElementById(listId);
@@ -96,8 +132,7 @@ function initializeSortable(listId) {
     });
 }
 
-// Habilitar drag and drop en ambas listas
+// Startup
+screenStart.style.display = 'block';
 initializeSortable('sortable1');
 initializeSortable('sortable2');
-
-

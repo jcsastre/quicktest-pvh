@@ -11,36 +11,45 @@
 
     <div id="screenStart" class="screen">
       <h1>Test de valoración de tus Mundos Externo e Interno</h1>
-      <p style="text-align: left;">
-        Mediante esta prueba obtendrás al instante información acerca de como te encuentras actualmente en tus Mundos 
-        Externo e Interno.
+      <p style="text-align: left">
+        Mediante esta prueba obtendrás al instante información acerca de como te
+        encuentras actualmente en tus Mundos Externo e Interno.
       </p>
-      
-      <p style="text-align: left;">
-        El test consta de dos partes. En cada parte hay que ordenar 18 frases. No lleva más de diez minutos.
+
+      <p style="text-align: left">
+        El test consta de dos partes. En cada parte hay que ordenar 18 frases.
+        No lleva más de diez minutos.
       </p>
-      <p style="text-align: left;">
-        Para poder generar los resultados de forma instántanea se usa un proceso automatizado, en este proceso automático no se recolecta
-        ningún tipo de información personal, tampoco se guardan las respuestas de forma anónima con fines estadísticos.
+      <p style="text-align: left">
+        Para poder generar los resultados de forma instántanea se usa un proceso
+        automatizado, en este proceso automático no se recolecta ningún tipo de
+        información personal, tampoco se guardan las respuestas de forma anónima
+        con fines estadísticos.
       </p>
-      <p style="text-align: left;">
-        La información que se obtiene de forma automática es sólo una parte de toda la información que se puede obtener del test.
-        Si después de realizar la prueba estás interesada en obtener información ampliada y la causa de los posibles bloqueos
-        que puedas tener, puedes contactarme por WhatsApp al 673 428 633, o por correo a juan.carlos.sastre.iglesias@gmail.com.
-        Estoy certificado en Axiología Formal e Interpretación de la Prueba de Valores R. S. Hartman por el Institut d'Axiología
-        Robert S. Hartman.
+      <p style="text-align: left">
+        La información que se obtiene de forma automática es sólo una parte de
+        toda la información que se puede obtener del test. Si después de
+        realizar la prueba estás interesada en obtener información ampliada y la
+        causa de los posibles bloqueos que puedas tener, puedes contactarme por
+        WhatsApp al 673 428 633, o por correo a
+        juan.carlos.sastre.iglesias@gmail.com. Estoy certificado en Axiología
+        Formal e Interpretación de la Prueba de Valores R. S. Hartman por el
+        Institut d'Axiología Robert S. Hartman.
       </p>
-      <button id="btnContinueToPart1">Empezar el Test</button>
+      <button id="btnScreenStartContinueToPart1">Empezar el Test</button>
     </div>
 
     <div id="screenPart1" class="screen hidden">
       <h1>Parte 1</h1>
-      <p style="text-align: left;">
-        Abajo encontrarás una lista de 18 frases. Cada una de éstas representa  algo  a  lo  cual  una  persona puede asignarle diferentes valores (bueno o malo).
-        Ordenálas en función del valor que en tu opinión representan. En la primera posición debería aparecer la frase que en tu  opinión representa  el  valor
-        más  bueno, y en la última fila la que representa el valor que consideras lo peor.  No juzgues  las frases por  la importancia, sino exclusivamente  
-        por  la  bondad  o  maldad  que contienen. No hay tiempo  límite,  pero  la  mayoría  de  personas ordenan todas las frases en cinco minutos. Para ordenarlas
-        solamente tienes que arrastraras arriba o abajo.
+      <p style="text-align: left">
+        Abajo encontrarás una lista de 18 frases. Ordenálas de mayor a menor
+        valor en tu opinión. En la primera posición debería aparecer la frase
+        que en tu opinión representa mayor valor, y en la última fila la que
+        representa menor valor. No juzgues las frases por la importancia, sino
+        exclusivamente por la bondad o maldad que contienen. No hay tiempo
+        límite, pero la mayoría de personas ordenan todas las frases en cinco
+        minutos. Para ordenarlas solamente tienes que arrastrarlas arriba o
+        abajo.
       </p>
       <ul id="sortable1">
         <li id="1" draggable="true">Una buena comida</li>
@@ -49,7 +58,9 @@
         <li id="4" draggable="true">Una multa</li>
         <li id="5" draggable="true">Basura</li>
         <li id="6" draggable="true">Un científico dedicado</li>
-        <li id="7" draggable="true">Hacer estallar un avión en vuelo con pasajeros dentro</li>
+        <li id="7" draggable="true">
+          Hacer estallar un avión en vuelo con pasajeros dentro
+        </li>
         <li id="8" draggable="true">Quemar a un hereje en una hoguera</li>
         <li id="9" draggable="true">Un cortocircuito</li>
         <li id="10" draggable="true">Con este anillo yo te desposo</li>
@@ -62,97 +73,165 @@
         <li id="17" draggable="true">Un genio matemático</li>
         <li id="18" draggable="true">Un uniforme</li>
       </ul>
-      <p style="text-align: left;">
-        Revisa el orden de las frases, y si te parece correcto, entonces pulsa sobre el botón "Ir a Parte 2"
+      <button id="btnScreenPart1ContinueToReview">Continuar</button>
+    </div>
+
+    <div id="screenPart1Review" class="screen hidden">
+      <p style="text-align: left">
+        Revisa el orden de las frases, y si te parece correcto, entonces pulsa
+        "Ir a Parte 2", en caso contrario pulsa "Volver a Parte 1".
       </p>
-      <button id="btnContinueToPart2">Ir a Parte 2</button>
+      <ol id="orderedListPart1"></ol>
+      <button id="btnScreenPart1ReviewBack">Volver a Parte 1</button>
+      <button id="btnScreenPart1ReviewNext">Ir a Parte 2</button>
     </div>
 
     <div id="screenPart2" class="screen hidden">
       <h1>Parte 2</h1>
-      <p style="text-align: left;">
-        Abajo encontrarás una lista de 18 frases. Ordenálas en función de lo acuerdo que estés. En la primera posición debería aparecer la frase
-        que estás más de acuerdo, y en la última fila la que estés más en desacuerdo. No hay tiempo  límite, pero la  mayoría  de  personas ordenan
-        todas las frases en cinco minutos. Para ordenarlas solamente tienes que arrastraras arriba o abajo.
+      <p style="text-align: left">
+        Abajo encontrarás una lista de 18 frases. Ordenálas en función de lo
+        acuerdo que estés. En la primera posición debería aparecer la frase que
+        estás más de acuerdo, y en la última fila la que estés más en
+        desacuerdo. No hay tiempo límite, pero la mayoría de personas ordenan
+        todas las frases en cinco minutos. Para ordenarlas solamente tienes que
+        arrastraras arriba o abajo.
       </p>
       <ul id="sortable2">
         <li id="1" draggable="true">Me gusta mi trabajo, me hace bien</li>
-        <li id="2" draggable="true">El universo es un sistema notablemente armonioso</li>
+        <li id="2" draggable="true">
+          El universo es un sistema notablemente armonioso
+        </li>
         <li id="3" draggable="true">El mundo no tiene mucho sentido para mí</li>
-        <li id="4" draggable="true">Por mas intensamente que trabaje siempre me sentiré frustrada</li>
-        <li id="5" draggable="true">Las condiciones en que trabajo son deplorables y arruinan mi trabajo</li>
+        <li id="4" draggable="true">
+          Por mas intensamente que trabaje siempre me sentiré frustrada
+        </li>
+        <li id="5" draggable="true">
+          Las condiciones en que trabajo son deplorables y arruinan mi trabajo
+        </li>
         <li id="6" draggable="true">Yo me siento a gusto en el mundo</li>
         <li id="7" draggable="true">Detesto mi trabajo</li>
         <li id="8" draggable="true">Mi vida está trastornando al mundo</li>
-        <li id="9" draggable="true">Mi trabajo no contribuye con nada al mundo</li>
-        <li id="10" draggable="true">Mi trabajo pone de manifiesto lo mejor que hay en mi</li>
+        <li id="9" draggable="true">
+          Mi trabajo no contribuye con nada al mundo
+        </li>
+        <li id="10" draggable="true">
+          Mi trabajo pone de manifiesto lo mejor que hay en mi
+        </li>
         <li id="11" draggable="true">Estoy contenta con ser yo misma</li>
         <li id="12" draggable="true">Maldigo el día en que nací</li>
         <li id="13" draggable="true">Me encanta mi trabajo</li>
-        <li id="14" draggable="true">Me molesta que el universo no tenga sentido</li>
-        <li id="15" draggable="true">Cuanto mejor comprendo mi lugar en el mundo, tanto mejor me va en mi trabajo</li>
+        <li id="14" draggable="true">
+          Me molesta que el universo no tenga sentido
+        </li>
+        <li id="15" draggable="true">
+          Cuanto mejor comprendo mi lugar en el mundo, tanto mejor me va en mi
+          trabajo
+        </li>
         <li id="16" draggable="true">Mi trabajo me hace desdichada</li>
-        <li id="17" draggable="true">Amo la belleza del mundo </li>
-        <li id="18" draggable="true">Mi trabajo contribuye a la belleza y armonía del mundo</li>
+        <li id="17" draggable="true">Amo la belleza del mundo</li>
+        <li id="18" draggable="true">
+          Mi trabajo contribuye a la belleza y armonía del mundo
+        </li>
       </ul>
-      <p style="text-align: left;">
+      <p style="text-align: left">
         Revisa el orden de las frases, y si te parece correcto, "Ver resultados"
       </p>
-      <button id="btnBackToPart1">Volver a Parte 1</button>
-      <button id="btnSeeResults">Ver resultados</button>
+      <button id="btnScreenPart2Back">Volver a Parte 1</button>
+      <button id="btnScreenPart2Next">Continuar</button>
+    </div>
+
+    <div id="screenPart2Review" class="screen hidden">
+      <p style="text-align: left">
+        Revisa el orden de las frases, y si te parece correcto, entonces pulsa
+        "Ver resultados", en caso contrario pulsa "Volver a Parte 2".
+      </p>
+      <ol id="orderedListPart2"></ol>
+      <button id="btnScreenPart2ReviewBack">Volver a Parte 2</button>
+      <button id="btnScreenPart2ReviewNext">Ver resultados</button>
     </div>
 
     <!-- Loading Screen -->
     <div id="screenFetchingResults" class="screen hidden">
       <h1>Cargando...</h1>
-      <div class="loader"></div> <!-- This will be the loading animation -->
+      <div class="loader"></div>
+      <!-- This will be the loading animation -->
     </div>
 
     <!-- Results Screen -->
     <div id="screenResult" class="screen hidden">
       <h1>Resultados</h1>
       <h1>Mundo Externo</h1>
-        <h3 style="text-align: left;">Relaciones Interpersonales: <span id="me_dimi"></span></h3>
-        <p style="text-align: left;">Aquí se evalua tu capacidad de reconocer y valorar la
-          singularidad de cada persona, apreciándolas por lo que son en su interior más allá de su rol social. Implica una 
-          comprensión profunda de la individualidad propia y ajena, permitiendo relaciones basadas en amor, respeto y calidez,
-          sin caer en dinámicas de dominio o dependencia. Es un compromiso con la humanidad, donde vemos a los demás por dentro,
-          reconociendo su valor único e irremplazable.
-        </p>
-        <h3 style="text-align: left;">Juicio Práctico: <span id="me_dime"></span></h3>
-        <p style="text-align: left;">Aquí se evalua tu capacidad para valorar y percibir aspectos del mundo externo
-          en función de su utilidad, funcionalidad y los beneficios tangibles que pueden proporcionar. Esta dimensión se enfoca
-          en la valoración de las cosas y situaciones externas en términos de su capacidad para cumplir objetivos, satisfacer 
-          necesidades, o proporcionar resultados concretos.
-        </p>
-        <h3 style="text-align: left;">Juicio Normativo: <span id="me_dims"></span></h3>
-        <p style="text-align: left;">Aquí se evalua tu capacidad de interpretar y comprender reglas, normas y teorías como parte
-          de tu desarrollo personal y tu cosmovisión. Incluye cómo percibes y respondes a la autoridad, así como tu habilidad para
-          integrar y dar sentido a los sistemas en tu vida, manteniendo una visión coherente de la totalidad de tu experiencia y
-          tu identidad.
-        </p>
+      <h3 style="text-align: left">
+        Relaciones Interpersonales: <span id="me_dimi"></span>
+      </h3>
+      <p style="text-align: left">
+        Aquí se evalua tu capacidad de reconocer y valorar la singularidad de
+        cada persona, apreciándolas por lo que son en su interior más allá de su
+        rol social. Implica una comprensión profunda de la individualidad propia
+        y ajena, permitiendo relaciones basadas en amor, respeto y calidez, sin
+        caer en dinámicas de dominio o dependencia. Es un compromiso con la
+        humanidad, donde vemos a los demás por dentro, reconociendo su valor
+        único e irremplazable.
+      </p>
+      <h3 style="text-align: left">
+        Juicio Práctico: <span id="me_dime"></span>
+      </h3>
+      <p style="text-align: left">
+        Aquí se evalua tu capacidad para valorar y percibir aspectos del mundo
+        externo en función de su utilidad, funcionalidad y los beneficios
+        tangibles que pueden proporcionar. Esta dimensión se enfoca en la
+        valoración de las cosas y situaciones externas en términos de su
+        capacidad para cumplir objetivos, satisfacer necesidades, o proporcionar
+        resultados concretos.
+      </p>
+      <h3 style="text-align: left">
+        Juicio Normativo: <span id="me_dims"></span>
+      </h3>
+      <p style="text-align: left">
+        Aquí se evalua tu capacidad de interpretar y comprender reglas, normas y
+        teorías como parte de tu desarrollo personal y tu cosmovisión. Incluye
+        cómo percibes y respondes a la autoridad, así como tu habilidad para
+        integrar y dar sentido a los sistemas en tu vida, manteniendo una visión
+        coherente de la totalidad de tu experiencia y tu identidad.
+      </p>
       <h1>Mundo Interno</h1>
-        <h3 style="text-align: left;">Autoestima: <span id="mi_dimi"></span></h3>
-        <p style="text-align: left;">Aquí se evalua tu capacidad de profunda comprensión y aceptación de tu singularidad esencial,
-          reconociendo tu valor inherente más allá de roles o logros. Es el compromiso de cuidarte, respetar tus necesidades y 
-          afirmarte en tu esencia, cultivando un sentido de pertenencia y autoaceptación que trasciende tus éxitos o fracasos mundanos.
-        </p>
-        <h3 style="text-align: left;">Vocación y Roles Sociales: <span id="mi_dime"></span></h3>
-        <p style="text-align: left;">Aquí se evalua tu capacidad para valorarte a través de tus acciones y funciones en la sociedad, 
-          ya sea como madre, profesional, o amiga. Y tu capacidad de elegir y desarrollar valores libremente, midiendo tu valor en
-          función de tu eficacia y contribución en estos roles, mientras avanzas en un proceso continuo de crecimiento y autorrealización.
-        </p>
-        <h3 style="text-align: left;">Autodisciplina y Autodirección: <span id="mi_dims"></span></h3>
-        <p style="text-align: left;">Aquí se evalua tu capacidad para establecer y perseguir metas personales, guiados por valores y 
-          principios libremente elegidos. Tu capacidad para visualizar tu futuro con ilusión, manteniendo una normatividad interna
-          que te impulsa a cumplir tus metas con equilibrio, sin caer en la rigidez o la laxitud. Es una danza constante entre
-          tus sueños y la disciplina para realizarlos, en armonía con tu ética y propósito personal.
-        </p>
-      <p style="text-align: left;">
-        Si después de realizar la prueba estás interesada en obtener información ampliada y la causa de los posibles bloqueos
-        que puedas tener, puedes contactarme por WhatsApp al 673 428 633, o por correo a juan.carlos.sastre.iglesias@gmail.com.
-        Estoy certificado en Axiología Formal e Interpretación de la Prueba de Valores R. S. Hartman por el Institut d'Axiología
-        Robert S. Hartman.
+      <h3 style="text-align: left">Autoestima: <span id="mi_dimi"></span></h3>
+      <p style="text-align: left">
+        Aquí se evalua tu capacidad de profunda comprensión y aceptación de tu
+        singularidad esencial, reconociendo tu valor inherente más allá de roles
+        o logros. Es el compromiso de cuidarte, respetar tus necesidades y
+        afirmarte en tu esencia, cultivando un sentido de pertenencia y
+        autoaceptación que trasciende tus éxitos o fracasos mundanos.
+      </p>
+      <h3 style="text-align: left">
+        Vocación y Roles Sociales: <span id="mi_dime"></span>
+      </h3>
+      <p style="text-align: left">
+        Aquí se evalua tu capacidad para valorarte a través de tus acciones y
+        funciones en la sociedad, ya sea como madre, profesional, o amiga. Y tu
+        capacidad de elegir y desarrollar valores libremente, midiendo tu valor
+        en función de tu eficacia y contribución en estos roles, mientras
+        avanzas en un proceso continuo de crecimiento y autorrealización.
+      </p>
+      <h3 style="text-align: left">
+        Autodisciplina y Autodirección: <span id="mi_dims"></span>
+      </h3>
+      <p style="text-align: left">
+        Aquí se evalua tu capacidad para establecer y perseguir metas
+        personales, guiados por valores y principios libremente elegidos. Tu
+        capacidad para visualizar tu futuro con ilusión, manteniendo una
+        normatividad interna que te impulsa a cumplir tus metas con equilibrio,
+        sin caer en la rigidez o la laxitud. Es una danza constante entre tus
+        sueños y la disciplina para realizarlos, en armonía con tu ética y
+        propósito personal.
+      </p>
+      <p style="text-align: left">
+        Si después de realizar la prueba estás interesada en obtener información
+        ampliada y la causa de los posibles bloqueos que puedas tener, puedes
+        contactarme por WhatsApp al 673 428 633, o por correo a
+        juan.carlos.sastre.iglesias@gmail.com. Estoy certificado en Axiología
+        Formal e Interpretación de la Prueba de Valores R. S. Hartman por el
+        Institut d'Axiología Robert S. Hartman.
       </p>
     </div>
 
