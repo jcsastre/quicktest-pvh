@@ -48,4 +48,48 @@ button {
 .sortable-ghost {
     opacity: 0;
   }
+
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  /* Custom button styles */
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  button:active {
+    background-color: #004085;
+    border-color: #004085;
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
   
