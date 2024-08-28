@@ -7,71 +7,24 @@ const screenFetchingResults = document.getElementById('screenFetchingResults');
 const screenResult = document.getElementById('screenResult');
 
 // Screen Start
-document.getElementById('btnScreenStartContinueToPart1').addEventListener('click', () => {
+document.getElementById('btn_ScreenStart_Continue').addEventListener('click', () => {
     screenStart.style.display = 'none';
     screenPart1.style.display = 'block';
 });
 
 // Screen Part 1
-document.getElementById('btnScreenPart1ContinueToReview').addEventListener('click', () => {
-
-    // Obtener los elementos de la lista anterior
-    const items = document.querySelectorAll('#sortable1 li');
-    const orderedListPart1 = document.getElementById('orderedListPart1');
-    orderedListPart1.innerHTML = ''; // Limpiar la lista numerada
-
-    // Añadir los elementos a la lista numerada
-    items.forEach((item, index) => {
-        const listItem = document.createElement('li');
-        listItem.style.textAlign = 'left';
-        listItem.textContent = `${item.textContent}`;
-        orderedListPart1.appendChild(listItem);
-    });
-
+document.getElementById('btn_ScreenPart1_Continue').addEventListener('click', () => {
     screenPart1.style.display = 'none';
-    screenPart1Review.style.display = 'block';
-});
-
-// Screen Part 1 Review
-document.getElementById('btnScreenPart1ReviewBack').addEventListener('click', () => {
-    screenPart1Review.style.display = 'none';
-    screenPart1.style.display = 'block';
-});
-document.getElementById('btnScreenPart1ReviewNext').addEventListener('click', () => {
-    screenPart1Review.style.display = 'none';
     screenPart2.style.display = 'block';
 });
 
 // Screen Part 2
-document.getElementById('btnScreenPart2Back').addEventListener('click', () => {
+document.getElementById('btn_ScreenPart2_Back').addEventListener('click', () => {
     screenPart2.style.display = 'none';
     screenPart1.style.display = 'block';
 });
 
-document.getElementById('btnScreenPart2Next').addEventListener('click', () => {
-
-    const items = document.querySelectorAll('#sortable2 li');
-    const orderedListPart2 = document.getElementById('orderedListPart2');
-    orderedListPart2.innerHTML = ''; // Limpiar la lista numerada
-
-    items.forEach((item, index) => {
-        const listItem = document.createElement('li');
-        listItem.style.textAlign = 'left';
-        listItem.textContent = `${item.textContent}`;
-        orderedListPart2.appendChild(listItem);
-    });
-
-    screenPart2.style.display = 'none';
-    screenPart2Review.style.display = 'block';
-});
-
-// Screen Part 2 Review
-document.getElementById('btnScreenPart2ReviewBack').addEventListener('click', () => {
-    screenPart2Review.style.display = 'none';
-    screenPart2.style.display = 'block';
-});
-document.getElementById('btnScreenPart2ReviewNext').addEventListener("click", () => {
-
+document.getElementById('btn_ScreenPart2_Continue').addEventListener('click', () => {
     screenPart2.style.display = 'none';
     screenFetchingResults.style.display = 'block';
 
