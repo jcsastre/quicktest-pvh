@@ -13,37 +13,48 @@
       <h2>Test de tus Mundos Externo e Interno</h2>
       <p style="text-align: left">
         Mediante esta prueba obtendrás al instante información acerca de como te
-        encuentras actualmente en tus Mundos Externo e Interno.
+        encuentras actualmente en tus Mundos Externo e Interno. El test consta
+        de dos partes. En cada parte hay que ordenar 18 frases, no lleva más de
+        diez minutos.
       </p>
 
-      <p style="text-align: left">
-        El test consta de dos partes. En cada parte hay que ordenar 18 frases.
-        No lleva más de diez minutos.
-      </p>
-      <p style="text-align: left">
-        Para poder generar los resultados de forma instántanea se usa un proceso
-        automatizado, en este proceso automático no se recolecta ningún tipo de
-        información personal, tampoco se guardan las respuestas de forma anónima
-        con fines estadísticos.
-      </p>
-      <p style="text-align: left">
-        La información que se obtiene de forma automática es sólo una parte de
-        toda la información que se puede obtener del test. Si después de
-        realizar la prueba estás interesada en obtener información ampliada y la
-        causa de los posibles bloqueos que puedas tener, puedes contactarme por
-        WhatsApp al 673 428 633, o por correo a
-        juan.carlos.sastre.iglesias@gmail.com. Estoy certificado en Axiología
-        Formal e Interpretación de la Prueba de Valores R. S. Hartman por el
-        Institut d'Axiología Robert S. Hartman.
-      </p>
-      <!-- Enlace de WhatsApp -->
-      <a
-        href="https://wa.me/1234567890?text=Hola%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios"
-        target="_blank"
-      >
-        Enviar mensaje por WhatsApp
-      </a>
       <button id="btn_ScreenStart_Continue">Empezar el Test</button>
+
+      <div class="bordered-text">
+        <h4>Información adicional</h4>
+
+        <p style="text-align: left">
+          Para poder generar los resultados de forma instántanea se usa un
+          proceso automatizado, en este proceso automático no se recolecta
+          ningún tipo de información personal, tampoco se guardan las respuestas
+          de forma anónima con fines estadísticos.
+        </p>
+        <p style="text-align: left">
+          Al ser un proceso automático sólo se puede proporcionar una pequeña
+          parte de toda la información que se puede obtener del test. Se
+          requiere la participación de una persona certificada para obtener toda
+          la información y la causa de los bloqueos detectados.
+        </p>
+        <p style="text-align: left">
+          Si estás interesada en obtener información ampliada y la causa de los
+          posibles bloqueos que puedas tener, puedes contactarme por WhatsApp al
+          673428633.
+        </p>
+        <button
+          class="whattsapp-button"
+          onclick="openWhatsAppJustInformation()"
+        >
+          <img src="img/WhatsApp.png" alt="Icon" />
+          <p>673 428 633</p>
+        </button>
+
+        <h4>Sobre mí</h4>
+        <p style="text-align: left">
+          Me llamo Juan Carlos y estoy certificado en Axiología Formal e
+          Interpretación de la Prueba de Valores S. Hartman por el Institut
+          d'Axiología Robert S. Hartman.
+        </p>
+      </div>
     </div>
 
     <div id="screenPart1" class="screen hidden">
@@ -147,7 +158,9 @@
     <!-- Results Screen -->
     <div id="screenResult" class="screen hidden">
       <h2>Resultados</h2>
+
       <h3>Mundo Externo</h3>
+
       <h4 style="text-align: left">
         Relaciones interpersonales: <span id="me_dimi"></span>
       </h4>
@@ -160,6 +173,7 @@
         humanidad, donde vemos a los demás por dentro, reconociendo su valor
         único e irremplazable.
       </p>
+
       <h4 style="text-align: left">Practicidad: <span id="me_dime"></span></h4>
       <p style="text-align: left">
         Aquí se evalua tu capacidad para valorar y percibir aspectos del mundo
@@ -169,6 +183,7 @@
         capacidad para cumplir objetivos, satisfacer necesidades, o proporcionar
         resultados concretos.
       </p>
+
       <h4 style="text-align: left">
         Sistemas y autoridad: <span id="me_dims"></span>
       </h4>
@@ -180,7 +195,9 @@
         etc), manteniendo una visión coherente de la totalidad de tu experiencia
         y tu identidad.
       </p>
+
       <h3>Mundo Interno</h3>
+
       <h4 style="text-align: left">Autoestima: <span id="mi_dimi"></span></h4>
       <p style="text-align: left">
         Aquí se evalua tu capacidad de profunda comprensión y aceptación de tu
@@ -189,6 +206,7 @@
         afirmarte en tu esencia, cultivando un sentido de pertenencia y
         autoaceptación que trasciende tus éxitos o fracasos mundanos.
       </p>
+
       <h4 style="text-align: left">
         Vocación y Roles Sociales: <span id="mi_dime"></span>
       </h4>
@@ -199,6 +217,7 @@
         en función de tu eficacia y contribución en estos roles, mientras
         avanzas en un proceso continuo de crecimiento y autorrealización.
       </p>
+
       <h4 style="text-align: left">
         Autodisciplina y Autodirección: <span id="mi_dims"></span>
       </h4>
@@ -211,16 +230,39 @@
         sueños y la disciplina para realizarlos, en armonía con tu ética y
         propósito personal.
       </p>
-      <p style="text-align: left">
-        Si después de realizar la prueba estás interesada en obtener información
-        ampliada y la causa de los posibles bloqueos que puedas tener, puedes
-        contactarme por WhatsApp al 673 428 633, o por correo a
-        juan.carlos.sastre.iglesias@gmail.com. Estoy certificado en Axiología
-        Formal e Interpretación de la Prueba de Valores R. S. Hartman por el
-        Institut d'Axiología Robert S. Hartman.
-      </p>
-    </div>
 
+      <div class="bordered-text">
+        <h4>Información sobre los resultados ampliada</h4>
+
+        <p style="text-align: left">
+          Si estás interesada en obtener información ampliada y la causa de los
+          posibles bloqueos que puedas tener, puedes contactarme por WhatsApp al
+          673428633, enviandome la lista de números que aparece a continuación:
+        </p>
+
+        <p style="text-align: left">
+          <span id="responses"></span>
+          <button class="copy-button" onclick="copyToClipboard()">
+            Copiar respuestas
+          </button>
+        </p>
+
+        <button
+          class="whattsapp-button"
+          onclick="openWhatsAppInformationAndResponses()"
+        >
+          <img src="img/WhatsApp.png" alt="Icon" />
+          <p>673 428 633</p>
+        </button>
+
+        <h4>Sobre mí</h4>
+        <p style="text-align: left">
+          Me llamo Juan Carlos y estoy certificado en Axiología Formal e
+          Interpretación de la Prueba de Valores S. Hartman por el Institut
+          d'Axiología Robert S. Hartman.
+        </p>
+      </div>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
