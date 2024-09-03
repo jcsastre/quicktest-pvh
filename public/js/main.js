@@ -5,6 +5,7 @@ const screenPart2 = document.getElementById("screenPart2");
 const screenPart2Review = document.getElementById("screenPart2Review");
 const screenFetchingResults = document.getElementById("screenFetchingResults");
 const screenResult = document.getElementById("screenResult");
+const screenError = document.getElementById("screenError");
 
 // Screen Start
 document
@@ -26,14 +27,6 @@ document
 
 // Screen Part 2
 document
-  .getElementById("btn_ScreenPart2_Back")
-  .addEventListener("click", () => {
-    screenPart2.style.display = "none";
-    screenPart1.style.display = "block";
-    window.scrollTo(0, 0);
-  });
-
-document
   .getElementById("btn_ScreenPart2_Continue")
   .addEventListener("click", () => {
     screenPart2.style.display = "none";
@@ -54,7 +47,8 @@ document
     console.log("payload", payload);
 
     // Realizar la petición HTTP GET
-    fetch("http://localhost:8080/quicktest", {
+    //fetch("http://165.22.86.91:8080/quicktest", {
+    fetch("http://165.22.86.91:8080/quicktest", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -79,7 +73,7 @@ document
       .catch((error) => {
         console.error("Error en la petición:", error);
         screenFetchingResults.style.display = "none";
-        screenResult.style.display = "block";
+        screenError.style.display = "block";
         window.scrollTo(0, 0);
         // TODO: Manejar el error adecuadamente
       });
@@ -116,6 +110,15 @@ function openWhatsAppInformationAndResponses() {
     "Hola, he realizado el test y estoy interesada en obtener más información. Estás han sido mis respuestas: ";
   const responses = document.getElementById("responses").textContent;
   const message = `${welcomeMessage}\n\n${responses}`;
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+  window.open(url, "_blank");
+}
+
+function openWhatsAppError() {
+  const phoneNumber = "673428633";
+  const message = "Hola, me sale un error al intentar realizar el test";
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;

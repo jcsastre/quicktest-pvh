@@ -9,6 +9,10 @@
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
+    <!----------->
+    <!-- START -->
+    <!----------->
+
     <div id="screenStart" class="screen">
       <h2>Test de tus Mundos Externo e Interno</h2>
       <p style="text-align: left">
@@ -155,21 +159,23 @@
         Revisa el orden de las frases, y si te parece correcto, pulsa el botón
         "Continuar".
       </p>
-      <p style="text-align: left">
-        Revisa el orden de las frases, y si te parece correcto, "Ver resultados"
-      </p>
-      <button id="btn_ScreenPart2_Back">Volver a Parte 1</button>
       <button id="btn_ScreenPart2_Continue">Continuar</button>
     </div>
 
-    <!-- Loading Screen -->
+    <!--------------------------------->
+    <!-- WAITING FOR SERVER RESPONSE -->
+    <!--------------------------------->
+
     <div id="screenFetchingResults" class="screen hidden">
       <h3>Cargando...</h3>
       <div class="loader"></div>
       <!-- This will be the loading animation -->
     </div>
 
-    <!-- Results Screen -->
+    <!--------------------------------->
+    <!-- RESULTS                     -->
+    <!--------------------------------->
+
     <div id="screenResult" class="screen hidden">
       <h2>Resultados</h2>
 
@@ -277,6 +283,27 @@
         </p>
       </div>
     </div>
+
+    <!--------------------------------->
+    <!-- ERROR                       -->
+    <!--------------------------------->
+
+    <div id="screenError" class="screen hidden">
+      <div class="bordered-text">
+        <h4>Ha ocurrido un error</h4>
+
+        <p style="text-align: left">
+          Por favor, intentalo dentro de unos minutos, y si el error persiste
+          escríbeme por WhatsApp al 673428633.
+        </p>
+
+        <button class="whattsapp-button" onclick="openWhatsAppError()">
+          <img src="img/WhatsApp.png" alt="Icon" />
+          <p>673 428 633</p>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
