@@ -47,8 +47,8 @@ document
     console.log("payload", payload);
 
     // Realizar la petición HTTP GET
-    //fetch("http://165.22.86.91:8080/quicktest", {
-    fetch("http://165.22.86.91:8080/quicktest", {
+    //fetch("http://localhost:8080/quicktest", {
+    fetch("https://hidden-dusk-20667-4658d7b070f3.herokuapp.com/quicktest", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
