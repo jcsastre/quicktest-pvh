@@ -25,6 +25,8 @@ document
     window.scrollTo(0, 0);
   });
 
+let responses;
+
 // Screen Part 2
 document
   .getElementById("btn_ScreenPart2_Continue")
@@ -39,7 +41,7 @@ document
     const itemsScreen3 = document.querySelectorAll("#sortable2 li");
     const idsScreen3 = Array.from(itemsScreen3).map((item) => item.id);
 
-    const responses = [...idsScreen2, ...idsScreen3];
+    responses = [...idsScreen2, ...idsScreen3];
     const payload = { responses };
 
     // Mostrar los identificadores en la consola
@@ -68,7 +70,7 @@ document
         document.getElementById(`mi_dime`).textContent = data[4];
         document.getElementById(`mi_dims`).textContent = data[5];
 
-        document.getElementById(`responses`).textContent = responses;
+        //document.getElementById(`responses`).textContent = responses;
       })
       .catch((error) => {
         console.error("Error en la petición:", error);
@@ -108,7 +110,7 @@ function openWhatsAppInformationAndResponses() {
   const phoneNumber = "673428633";
   const welcomeMessage =
     "Hola, he realizado el test y estoy interesada en obtener más información. Estás han sido mis respuestas: ";
-  const responses = document.getElementById("responses").textContent;
+  //const responses = document.getElementById("responses").textContent;
   const message = `${welcomeMessage}\n\n${responses}`;
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
