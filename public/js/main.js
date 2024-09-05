@@ -108,10 +108,7 @@ function openWhatsAppJustInformation() {
 
 function openWhatsAppInformationAndResponses() {
   const phoneNumber = "673428633";
-  const welcomeMessage =
-    "Hola, he realizado el test y estoy interesada en obtener más información. Estás han sido mis respuestas: ";
-  //const responses = document.getElementById("responses").textContent;
-  const message = `${welcomeMessage}\n\n${responses}`;
+  const message = `Hola, he realizado el test (respuestas: ${responses}) y estoy interesada en obtener más información`;
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
