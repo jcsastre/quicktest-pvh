@@ -100,9 +100,6 @@ function submitResponses() {
       document.getElementById(`mi_dimi`).textContent = data[3];
       document.getElementById(`mi_dime`).textContent = data[4];
       document.getElementById(`mi_dims`).textContent = data[5];
-      document.getElementById(`ms_dimi`).textContent = data[6];
-      document.getElementById(`ms_dime`).textContent = data[7];
-      document.getElementById(`ms_dims`).textContent = data[8];
     })
     .catch((error) => {
       console.error("Error en la petición:", error);
