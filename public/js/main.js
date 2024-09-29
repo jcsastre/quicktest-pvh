@@ -156,7 +156,6 @@ function openWhatsAppError() {
 function showScreen(hideScreen, showScreen) {
   hideScreen.style.display = "none";
   showScreen.style.display = "block";
-  window.scrollTo(0, 0);
 }
 
 // Startup
