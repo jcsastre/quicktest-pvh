@@ -29,15 +29,7 @@ document
 document
   .getElementById("btn_ScreenPart2_Continue")
   .addEventListener("click", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const showMundoSexual = urlParams.get("ms") === "true";
-
-    if (showMundoSexual) {
-      showScreen(screenPart2, screenPart3);
-    } else {
-      showScreen(screenPart2, screenFetchingResults);
-      submitResponses();
-    }
+    showScreen(screenPart2, screenPart3);
   });
 
 // Screen Part 3 - Skip button
@@ -80,33 +72,35 @@ function submitResponses() {
   console.log("responses", responses);
   console.log("payload", payload);
 
+  showScreen(screenFetchingResults, screenResult);
+
   //fetch("http://localhost:8080/quicktest", {
-  fetch("https://hidden-dusk-20667-4658d7b070f3.herokuapp.com/quicktest", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(responses),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Respuesta del servidor:", data);
+  // fetch("https://hidden-dusk-20667-4658d7b070f3.herokuapp.com/quicktest", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(responses),
+  // })
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     console.log("Respuesta del servidor:", data);
 
-      showScreen(screenFetchingResults, screenResult);
+  //     showScreen(screenFetchingResults, screenResult);
 
-      document.getElementById(`me_dimi`).textContent = data[0];
-      document.getElementById(`me_dime`).textContent = data[1];
-      document.getElementById(`me_dims`).textContent = data[2];
-      document.getElementById(`mi_dimi`).textContent = data[3];
-      document.getElementById(`mi_dime`).textContent = data[4];
-      document.getElementById(`mi_dims`).textContent = data[5];
-    })
-    .catch((error) => {
-      console.error("Error en la petición:", error);
-      screenFetchingResults.style.display = "none";
-      screenError.style.display = "block";
-      window.scrollTo(0, 0);
-    });
+  //     document.getElementById(`me_dimi`).textContent = data[0];
+  //     document.getElementById(`me_dime`).textContent = data[1];
+  //     document.getElementById(`me_dims`).textContent = data[2];
+  //     document.getElementById(`mi_dimi`).textContent = data[3];
+  //     document.getElementById(`mi_dime`).textContent = data[4];
+  //     document.getElementById(`mi_dims`).textContent = data[5];
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error en la petición:", error);
+  //     screenFetchingResults.style.display = "none";
+  //     screenError.style.display = "block";
+  //     window.scrollTo(0, 0);
+  //   });
 }
 
 // Configurar SortableJS para listas
