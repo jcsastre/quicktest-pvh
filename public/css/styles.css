@@ -8,17 +8,17 @@ body {
 
 /* For desktop browsers */
 body {
-    max-width: 1024px; /* Limit the content width on wider screens */
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
+  max-width: 1024px; /* Limit the content width on wider screens */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
 }
 
 /* For mobile browsers */
 @media (max-width: 767px) {
-    body {
-        max-width: 100%; /* Allow the content to take full width on small screens */
-        padding: 10px;
-    }
+  body {
+    max-width: 100%; /* Allow the content to take full width on small screens */
+    padding: 10px;
+  }
 }
 
 .screen {
@@ -43,10 +43,18 @@ body {
 }
 
 .screen ul li {
-  margin: 5px 0;
-  padding: 10px;
-  background-color: #ddd;
-  cursor: move;
+  margin: 2px 0;
+  padding: 4px 0;
+  background-color: transparent; /* Quitar fondo gris */
+  cursor: default; /* Quitar cursor de mover */
+  display: flex;
+  align-items: center;
+}
+
+.rank-input {
+  margin-right: 12px;
+  width: 48px;
+  text-align: left;
 }
 
 button {
@@ -64,7 +72,6 @@ button {
   opacity: 0;
 }
 
-
 .bordered-text {
   border: 1px solid #ccc;
   padding: 16px;
@@ -76,8 +83,6 @@ button {
   display: flex;
   align-items: center;
 }
-
-
 
 /* Custom button reset & styles */
 
@@ -93,7 +98,6 @@ button {
   color: inherit;
   cursor: pointer;
 }
-
 
 button {
   display: inline-block;

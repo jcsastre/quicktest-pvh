@@ -9,11 +9,12 @@
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
-    <!----------->
+
+     <!----------->
     <!-- START -->
     <!----------->
 
-    <div id="screenStart" class="screen">
+    <div id="screenStart" class="screen hidden">
       <h2>Prueba de Valores Hartman</h2>
 
       <p style="text-align: left">
@@ -45,11 +46,53 @@
           Análisis Blockchain, y profesionalmente me dedico a la Ingeniería de
           Software. Fuera de la tecnología he cursado el IFOPEEC (Master en
           Estados Expandidos de Consciencia), y estoy certificado como Axiometra
-          en la Prueba de Valores de Hartman por el Institut d’Aixiologia
+          en la Prueba de Valores de Hartman por el Institut d’Axiología
           Cognitiva Robert S. Hartman.
         </p>
       </div>
     </div>
+
+    <!------------->
+    <!-- PARTE 0 -->
+    <!------------->
+
+    <div id="screenPart0" class="screen">
+      <h2>Datos personales</h2>
+      <form id="formPart0">
+        <div style="margin-bottom: 10px; text-align: left;">
+          <label for="nombre">Nombre (sin apellidos):</label><br>
+          <input type="text" id="nombre" name="nombre" maxlength="30" required />
+        </div>
+        <div style="margin-bottom: 10px; text-align: left;">
+          <label for="edad">Edad:</label><br>
+          <input type="number" id="edad" name="edad" maxlength="2" min="0" max="99" required />
+        </div>
+        <div style="margin-bottom: 10px; text-align: left;">
+          <label for="sexo">Sexo:</label><br>
+          <input type="text" id="sexo" name="sexo" maxlength="20" required />
+        </div>
+        <div style="margin-bottom: 10px; text-align: left;">
+          <label for="estado_civil">Estado civil:</label><br>
+          <input type="text" id="estado_civil" name="estado_civil" maxlength="30" required />
+        </div>
+        <div style="margin-bottom: 10px; text-align: left;">
+          <label for="hijos">Hijos:</label><br>
+          <input type="number" id="hijos" name="hijos" maxlength="2" min="0" max="99" required />
+        </div>
+        <div style="margin-bottom: 10px; text-align: left;">
+          <label for="profesion">Profesión:</label><br>
+          <input type="text" id="profesion" name="profesion" maxlength="30" required />
+        </div>
+        <div style="margin-bottom: 10px; text-align: left;">
+          <input type="checkbox" id="consentimiento" name="consentimiento" required />
+          <label for="consentimiento" style="display:inline;">
+            He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados únicamente para la realización de este test y no se compartirán con terceros.
+          </label>
+        </div>
+        <button type="submit" id="btn_ScreenPart0_Continue">Continuar</button>
+      </form>
+    </div>
+   
 
     <!------------->
     <!-- PARTE 1 -->
@@ -65,27 +108,25 @@
         personas ordenan todas las frases en cinco minutos. Para ordenarlas
         solamente tienes que arrastrarlas arriba o abajo.
       </p>
-      <ul id="sortable1">
-        <li id="1" draggable="true">Una buena comida</li>
-        <li id="2" draggable="true">Un mejoramiento técnico</li>
-        <li id="3" draggable="true">Una idea absurda</li>
-        <li id="4" draggable="true">Una multa</li>
-        <li id="5" draggable="true">Basura</li>
-        <li id="6" draggable="true">Un científico dedicado</li>
-        <li id="7" draggable="true">
-          Hacer estallar un avión en vuelo con pasajeros dentro
-        </li>
-        <li id="8" draggable="true">Quemar a un hereje en una hoguera</li>
-        <li id="9" draggable="true">Un cortocircuito</li>
-        <li id="10" draggable="true">Con este anillo yo te desposo</li>
-        <li id="11" draggable="true">Un bebé</li>
-        <li id="12" draggable="true">Torturar a una persona</li>
-        <li id="13" draggable="true">Amor a la naturaleza</li>
-        <li id="14" draggable="true">Un loco</li>
-        <li id="15" draggable="true">Una línea de producción en serie</li>
-        <li id="16" draggable="true">Esclavitud</li>
-        <li id="17" draggable="true">Un genio matemático</li>
-        <li id="18" draggable="true">Un uniforme</li>
+      <ul id="list1">
+        <li id="1"><input type="number" min="1" max="18" class="rank-input" /> Una buena comida</li>
+        <li id="2"><input type="number" min="1" max="18" class="rank-input" /> Un mejoramiento técnico</li>
+        <li id="3"><input type="number" min="1" max="18" class="rank-input" /> Una idea absurda</li>
+        <li id="4"><input type="number" min="1" max="18" class="rank-input" /> Una multa</li>
+        <li id="5"><input type="number" min="1" max="18" class="rank-input" /> Basura</li>
+        <li id="6"><input type="number" min="1" max="18" class="rank-input" /> Un científico dedicado</li>
+        <li id="7"><input type="number" min="1" max="18" class="rank-input" /> Hacer estallar un avión en vuelo con pasajeros dentro</li>
+        <li id="8"><input type="number" min="1" max="18" class="rank-input" /> Quemar a un hereje en una hoguera</li>
+        <li id="9"><input type="number" min="1" max="18" class="rank-input" /> Un cortocircuito</li>
+        <li id="10"><input type="number" min="1" max="18" class="rank-input" /> Con este anillo yo te desposo</li>
+        <li id="11"><input type="number" min="1" max="18" class="rank-input" /> Un bebé</li>
+        <li id="12"><input type="number" min="1" max="18" class="rank-input" /> Torturar a una persona</li>
+        <li id="13"><input type="number" min="1" max="18" class="rank-input" /> Amor a la naturaleza</li>
+        <li id="14"><input type="number" min="1" max="18" class="rank-input" /> Un loco</li>
+        <li id="15"><input type="number" min="1" max="18" class="rank-input" /> Una línea de producción en serie</li>
+        <li id="16"><input type="number" min="1" max="18" class="rank-input" /> Esclavitud</li>
+        <li id="17"><input type="number" min="1" max="18" class="rank-input" /> Un genio matemático</li>
+        <li id="18"><input type="number" min="1" max="18" class="rank-input" /> Un uniforme</li>
       </ul>
       <p style="text-align: left">
         Revisa el orden de las frases, y si te parece correcto, pulsa el botón
@@ -108,42 +149,25 @@
         todas las frases en cinco minutos. Para ordenarlas solamente tienes que
         arrastraras arriba o abajo.
       </p>
-      <ul id="sortable2">
-        <li id="1" draggable="true">Me gusta mi trabajo, me hace bien</li>
-        <li id="2" draggable="true">
-          El universo es un sistema notablemente armonioso
-        </li>
-        <li id="3" draggable="true">El mundo no tiene mucho sentido para mí</li>
-        <li id="4" draggable="true">
-          Por mas intensamente que trabaje siempre me sentiré frustrada
-        </li>
-        <li id="5" draggable="true">
-          Las condiciones en que trabajo son deplorables y arruinan mi trabajo
-        </li>
-        <li id="6" draggable="true">Yo me siento a gusto en el mundo</li>
-        <li id="7" draggable="true">Detesto mi trabajo</li>
-        <li id="8" draggable="true">Mi vida está trastornando al mundo</li>
-        <li id="9" draggable="true">
-          Mi trabajo no contribuye con nada al mundo
-        </li>
-        <li id="10" draggable="true">
-          Mi trabajo pone de manifiesto lo mejor que hay en mi
-        </li>
-        <li id="11" draggable="true">Estoy contenta con ser yo misma</li>
-        <li id="12" draggable="true">Maldigo el día en que nací</li>
-        <li id="13" draggable="true">Me encanta mi trabajo</li>
-        <li id="14" draggable="true">
-          Me molesta que el universo no tenga sentido
-        </li>
-        <li id="15" draggable="true">
-          Cuanto mejor comprendo mi lugar en el mundo, tanto mejor me va en mi
-          trabajo
-        </li>
-        <li id="16" draggable="true">Mi trabajo me hace desdichada</li>
-        <li id="17" draggable="true">Amo la belleza del mundo</li>
-        <li id="18" draggable="true">
-          Mi trabajo contribuye a la belleza y armonía del mundo
-        </li>
+      <ul id="list2">
+        <li id="1"><input type="number" min="1" max="18" class="rank-input" /> Me gusta mi trabajo, me hace bien</li>
+        <li id="2"><input type="number" min="1" max="18" class="rank-input" /> El universo es un sistema notablemente armonioso</li>
+        <li id="3"><input type="number" min="1" max="18" class="rank-input" /> El mundo no tiene mucho sentido para mí</li>
+        <li id="4"><input type="number" min="1" max="18" class="rank-input" /> Por mas intensamente que trabaje siempre me sentiré frustrada</li>
+        <li id="5"><input type="number" min="1" max="18" class="rank-input" /> Las condiciones en que trabajo son deplorables y arruinan mi trabajo</li>
+        <li id="6"><input type="number" min="1" max="18" class="rank-input" /> Yo me siento a gusto en el mundo</li>
+        <li id="7"><input type="number" min="1" max="18" class="rank-input" /> Detesto mi trabajo</li>
+        <li id="8"><input type="number" min="1" max="18" class="rank-input" /> Mi vida está trastornando al mundo</li>
+        <li id="9"><input type="number" min="1" max="18" class="rank-input" /> Mi trabajo no contribuye con nada al mundo</li>
+        <li id="10"><input type="number" min="1" max="18" class="rank-input" /> Mi trabajo pone de manifiesto lo mejor que hay en mi</li>
+        <li id="11"><input type="number" min="1" max="18" class="rank-input" /> Estoy contenta con ser yo misma</li>
+        <li id="12"><input type="number" min="1" max="18" class="rank-input" /> Maldigo el día en que nací</li>
+        <li id="13"><input type="number" min="1" max="18" class="rank-input" /> Me encanta mi trabajo</li>
+        <li id="14"><input type="number" min="1" max="18" class="rank-input" /> Me molesta que el universo no tenga sentido</li>
+        <li id="15"><input type="number" min="1" max="18" class="rank-input" /> Cuanto mejor comprendo mi lugar en el mundo, tanto mejor me va en mi trabajo</li>
+        <li id="16"><input type="number" min="1" max="18" class="rank-input" /> Mi trabajo me hace desdichada</li>
+        <li id="17"><input type="number" min="1" max="18" class="rank-input" /> Amo la belleza del mundo</li>
+        <li id="18"><input type="number" min="1" max="18" class="rank-input" /> Mi trabajo contribuye a la belleza y armonía del mundo</li>
       </ul>
       <p style="text-align: left">
         Revisa el orden de las frases, y si te parece correcto, pulsa el botón
@@ -171,37 +195,25 @@
         todas las frases en cinco minutos. Para ordenarlas solamente tienes que
         arrastraras arriba o abajo.
       </p>
-      <ul id="sortable3">
-        <li id="1" draggable="true">Mi deseo sexual es insaciable</li>
-        <li id="2" draggable="true">
-          Mi práctica sexual me hace muy hábil sexualmente
-        </li>
-        <li id="3" draggable="true">Mi práctica sexual me crea dificultad</li>
-        <li id="4" draggable="true">
-          Mi habilidad sexual destruye mi deseo sexual
-        </li>
-        <li id="5" draggable="true">
-          Mientras más sexual me siento menos me gusta
-        </li>
-        <li id="6" draggable="true">
-          La habilidad sexual aumenta mi capacidad para amar
-        </li>
-        <li id="7" draggable="true">Yo detesto mi deseo sexual</li>
-        <li id="8" draggable="true">Yo detesto mi práctica sexual</li>
-        <li id="9" draggable="true">No me gusta mi práctica sexual</li>
-        <li id="10" draggable="true">Yo deseo amar y ser amado</li>
-        <li id="11" draggable="true">Yo amo amar y ser amado</li>
-        <li id="12" draggable="true">El amor es odioso para mí</li>
-        <li id="13" draggable="true">Yo amo ser sexualmente deseado</li>
-        <li id="14" draggable="true">El sexo destruye mi amor</li>
-        <li id="15" draggable="true">
-          Mi habilidad sexual aumenta mi deseo sexual
-        </li>
-        <li id="16" draggable="true">El amor no me gusta</li>
-        <li id="17" draggable="true">Yo amo el juego sexual</li>
-        <li id="18" draggable="true">
-          Mi deseo sexual aumenta mi habilidad sexual
-        </li>
+      <ul id="list3">
+        <li id="1"><input type="number" min="1" max="18" class="rank-input" /> Mi deseo sexual es insaciable</li>
+        <li id="2"><input type="number" min="1" max="18" class="rank-input" /> Mi práctica sexual me hace muy hábil sexualmente</li>
+        <li id="3"><input type="number" min="1" max="18" class="rank-input" /> Mi práctica sexual me crea dificultad</li>
+        <li id="4"><input type="number" min="1" max="18" class="rank-input" /> Mi habilidad sexual destruye mi deseo sexual</li>
+        <li id="5"><input type="number" min="1" max="18" class="rank-input" /> Mientras más sexual me siento menos me gusta</li>
+        <li id="6"><input type="number" min="1" max="18" class="rank-input" /> La habilidad sexual aumenta mi capacidad para amar</li>
+        <li id="7"><input type="number" min="1" max="18" class="rank-input" /> Yo detesto mi deseo sexual</li>
+        <li id="8"><input type="number" min="1" max="18" class="rank-input" /> Yo detesto mi práctica sexual</li>
+        <li id="9"><input type="number" min="1" max="18" class="rank-input" /> No me gusta mi práctica sexual</li>
+        <li id="10"><input type="number" min="1" max="18" class="rank-input" /> Yo deseo amar y ser amado</li>
+        <li id="11"><input type="number" min="1" max="18" class="rank-input" /> Yo amo amar y ser amado</li>
+        <li id="12"><input type="number" min="1" max="18" class="rank-input" /> El amor es odioso para mí</li>
+        <li id="13"><input type="number" min="1" max="18" class="rank-input" /> Yo amo ser sexualmente deseado</li>
+        <li id="14"><input type="number" min="1" max="18" class="rank-input" /> El sexo destruye mi amor</li>
+        <li id="15"><input type="number" min="1" max="18" class="rank-input" /> Mi habilidad sexual aumenta mi deseo sexual</li>
+        <li id="16"><input type="number" min="1" max="18" class="rank-input" /> El amor no me gusta</li>
+        <li id="17"><input type="number" min="1" max="18" class="rank-input" /> Yo amo el juego sexual</li>
+        <li id="18"><input type="number" min="1" max="18" class="rank-input" /> Mi deseo sexual aumenta mi habilidad sexual</li>
       </ul>
       <p style="text-align: left">
         Revisa el orden de las frases, y si te parece correcto, pulsa el botón
